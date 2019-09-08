@@ -1,5 +1,4 @@
 const { User, validate } = require("../models/User.model");
-const bcrypt = require('bcrypt');
 
 const GetCurrentUser = async (req, res) => {
     const user = await User.findById(req.user._id).select("-password");
